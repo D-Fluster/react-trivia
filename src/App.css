@@ -1,0 +1,139 @@
+#root {
+  text-align: center;
+  background-color: lavender;
+}
+
+#header {
+  background-color: rebeccapurple;
+  border: 10px solid orchid;
+  color: lavender;
+  font-family:"Papyrus", fantasy, sans-serif;
+  font-size: max(5em);
+  padding: 5%;
+}
+
+#score {
+  background-color: orchid;
+  border: 7px solid yellow;
+  color: aliceblue;
+  font-size: max(2em);
+  margin-bottom: -5px;
+  padding: 3%;
+}
+
+.card {
+  max-width: 90%;
+  margin: 10% 10% 10% 10%;
+  padding: 5% 10% 5% 10%;
+}
+
+.card-title {
+  border-radius: 11px;
+  font-size: 3em;
+  padding: clamp(5%, 10%, 15%);
+}
+
+.card-text {
+  font-size: 1.5em;
+  margin: 5%;
+}
+
+.btn-group {
+  margin: 5% auto 250px auto;
+}
+
+[type="button"] {
+  padding: 15% auto 15% auto;
+  font-size: 1.5em;
+}
+
+.dropdown-item {
+  text-align: center !important;
+}
+
+/* 
+
+margins & padding -- up, right, down, left
+
+$body-bg {
+  background-color: lavender;
+}
+
+.card-body{
+  border: 1px solid black;
+}
+
+clamp(200px, 33%, 300px) 
+will "clamp" the min & max values (e.g., of margins/padding)
+where the middle value is an ideal
+
+  margin: 5% auto 250px auto;
+  padding: 5% 33% 5% 33%;
+  border: 10px solid black;
+*/
+
+
+/*
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Action
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+*/
+
+/*
+  background-image: url("https://media.geeksforgeeks.org/wp-content/uploads/rk.png");
+  background-size: "cover";
+  height: 100vh;
+  background-repeat: no-repeat;
+*/
+
+
+/*
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+*/

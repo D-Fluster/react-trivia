@@ -1,0 +1,78 @@
+import React from "react";
+
+interface Props {
+  color:
+    | "info" // categories[0] / Pop Culture / blue
+    | "secondary" // categories[1] / Entertainment / gray
+    | "success"; // categories[2] / Technology / green
+  interrogative: "Who" | "What?" | "When?" | "Where";
+}
+
+const Dropdown = ({ color, interrogative }: Props) => {
+  return (
+    <>
+      <div className="btn-group">
+        <button
+          type="button"
+          className={"btn dropdown-toggle btn-" + color}
+          data-bs-toggle="dropdown"
+        >
+          {interrogative} Am I?
+        </button>
+        <ul className="dropdown-menu">
+          <li className="dropdown-item" id="a0">
+            Answer 0
+          </li>
+          <li>
+            <a className="dropdown-item" id="a1" href="#">
+              Answer 1
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" id="a2" href="#">
+              Answer 2
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" id="a3" href="#">
+              Answer 3
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" id="a4" href="#">
+              Answer 4
+            </a>
+          </li>
+          <li>
+            <hr className="dropdown-divider" />
+          </li>
+          <li>
+            <a className="dropdown-item" id="done" href="#">
+              I give up!
+            </a>
+          </li>
+        </ul>
+      </div>
+    </>
+  );
+};
+
+export default Dropdown;
+
+/*
+
+
+
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Action
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+*/
