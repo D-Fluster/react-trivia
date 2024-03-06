@@ -9,13 +9,19 @@ interface Props {
     | "success"; // categories[2] / Technology / green
   heading: "Pop Culture" | "Entertainment" | "Technology";
   question: string;
-  answers: string[];
+  allAnswers: string[];
+  correctAnswer: number;
+  interrogative: string;
 }
 
-const Card = ({ color, heading, question, answers }: Props) => {
-  let colors = ["info", "secondary", "success"];
-  let ints = ["Who", "What", "When", "Where"];
-
+const Card = ({
+  color,
+  heading,
+  question,
+  allAnswers,
+  correctAnswer,
+  interrogative,
+}: Props) => {
   return (
     <>
       <div className="card">
@@ -23,7 +29,12 @@ const Card = ({ color, heading, question, answers }: Props) => {
           <h5 className={"card-title text-bg-" + color}>{heading}</h5>
           <p className="card-text">{question}</p>
         </div>
-        <Dropdown color={colors[0]} interrogative={ints[2]} />
+        <Dropdown
+          color={color}
+          allAnswers={allAnswers}
+          correctAnswer={correctAnswer}
+          interrogative={interrogative}
+        />
       </div>
     </>
   );
@@ -32,6 +43,18 @@ const Card = ({ color, heading, question, answers }: Props) => {
 export default Card;
 
 /*
+  let colors = ["info", "secondary", "success"];
+  let ints = ["Who", "What", "When", "Where"];
+
+            <p>
+            <strong>color:</strong> {color} <br />
+            <strong>heading:</strong> {heading} <br />
+            <strong>question:</strong> {question} <br />
+            <strong>allAnswers:</strong> {allAnswers} <br />
+            <strong>correctAnswer:</strong> {correctAnswer} <br />
+            <strong>interrogative:</strong> {interrogative}
+          </p>
+
 // children: ReactNode;
 
 // interface Props {

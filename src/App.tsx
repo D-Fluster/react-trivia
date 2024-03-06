@@ -3,11 +3,10 @@
 // Within function:
 // // const [count, setCount] = useState(0);
 
-// import background from "./assets/brAInbow.jpg";
+// import background from "./assets/brAInbowXL.jpg";
 // <div style={{ backgroundImage: `url(${background})` }}>
 
 import Card from "./components/Card";
-import Dropdown from "./components/Dropdown";
 import Header from "./components/Header";
 import Score from "./components/Score";
 
@@ -15,6 +14,8 @@ function App() {
   let colors = ["info", "secondary", "success"];
 
   let headings = ["Pop Culture", "Entertainment", "Technology"];
+
+  let words = ["Who", "What", "When", "Where"];
 
   // Without a dictionary for testing purposes only
 
@@ -30,6 +31,10 @@ function App() {
     ["Facebook", "Friendster", "MySpace", "Twitter", "YouTube"],
   ];
 
+  let correctAnswers = [3, 4, 2];
+
+  let interrogatives = [words[1], words[0], words[1]];
+
   return (
     <>
       <div>
@@ -40,19 +45,25 @@ function App() {
           color={colors[0]}
           heading={headings[0]}
           question={questions[0]}
-          answers={answers[0]}
+          allAnswers={answers[0]}
+          correctAnswer={correctAnswers[0]}
+          interrogative={interrogatives[0]}
         />
         <Card
           color={colors[1]}
           heading={headings[1]}
           question={questions[1]}
-          answers={answers[1]}
+          allAnswers={answers[1]}
+          correctAnswer={correctAnswers[1]}
+          interrogative={interrogatives[1]}
         />
         <Card
           color={colors[2]}
           heading={headings[2]}
           question={questions[2]}
-          answers={answers[2]}
+          allAnswers={answers[2]}
+          correctAnswer={correctAnswers[2]}
+          interrogative={interrogatives[2]}
         />
       </div>
       <div>

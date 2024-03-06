@@ -1,14 +1,18 @@
 import React from "react";
 
 interface Props {
-  color:
-    | "info" // categories[0] / Pop Culture / blue
-    | "secondary" // categories[1] / Entertainment / gray
-    | "success"; // categories[2] / Technology / green
-  interrogative: "Who" | "What?" | "When?" | "Where";
+  color: string;
+  allAnswers: string[];
+  correctAnswer: number;
+  interrogative: string;
 }
 
-const Dropdown = ({ color, interrogative }: Props) => {
+const Dropdown = ({
+  color,
+  allAnswers,
+  correctAnswer,
+  interrogative,
+}: Props) => {
   return (
     <>
       <div className="btn-group">
@@ -21,26 +25,26 @@ const Dropdown = ({ color, interrogative }: Props) => {
         </button>
         <ul className="dropdown-menu">
           <li className="dropdown-item" id="a0">
-            Answer 0
+            {allAnswers[0]}
           </li>
           <li>
             <a className="dropdown-item" id="a1" href="#">
-              Answer 1
+              {allAnswers[1]}
             </a>
           </li>
           <li>
             <a className="dropdown-item" id="a2" href="#">
-              Answer 2
+              {allAnswers[2]}
             </a>
           </li>
           <li>
             <a className="dropdown-item" id="a3" href="#">
-              Answer 3
+              {allAnswers[3]}
             </a>
           </li>
           <li>
             <a className="dropdown-item" id="a4" href="#">
-              Answer 4
+              {allAnswers[4]}
             </a>
           </li>
           <li>
@@ -60,8 +64,20 @@ const Dropdown = ({ color, interrogative }: Props) => {
 export default Dropdown;
 
 /*
+      <div>
+        <strong>color:</strong> {color} <br />
+        <strong>allAnswers:</strong> {allAnswers} <br />
+        <strong>correctAnswer:</strong> {correctAnswer} <br />
+        <strong>interrogative:</strong> {interrogative}
+      </div>
 
-
+// interface Props {
+//   color:
+//     | "info" // categories[0] / Pop Culture / blue
+//     | "secondary" // categories[1] / Entertainment / gray
+//     | "success"; // categories[2] / Technology / green
+//   interrogative: "Who" | "What?" | "When?" | "Where";
+// }
 
 <div class="btn-group">
   <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
