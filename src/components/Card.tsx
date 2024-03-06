@@ -1,27 +1,22 @@
 // import React, { ReactNode } from "react";
 
-import Dropdown from "./Dropdown";
+import { ReactNode } from "react";
+// import Dropdown from "./Dropdown";
 
 interface Props {
+  children: ReactNode;
   color:
     | "info" // categories[0] / Pop Culture / blue
     | "secondary" // categories[1] / Entertainment / gray
     | "success"; // categories[2] / Technology / green
   heading: "Pop Culture" | "Entertainment" | "Technology";
   question: string;
-  allAnswers: string[];
-  correctAnswer: number;
-  interrogative: string;
+  // allAnswers: string[];
+  // correctAnswer: number;
+  // interrogative: string;
 }
 
-const Card = ({
-  color,
-  heading,
-  question,
-  allAnswers,
-  correctAnswer,
-  interrogative,
-}: Props) => {
+const Card = ({ children, color, heading, question }: Props) => {
   return (
     <>
       <div className="card">
@@ -29,12 +24,7 @@ const Card = ({
           <h5 className={"card-title text-bg-" + color}>{heading}</h5>
           <p className="card-text">{question}</p>
         </div>
-        <Dropdown
-          color={color}
-          allAnswers={allAnswers}
-          correctAnswer={correctAnswer}
-          interrogative={interrogative}
-        />
+        {children}
       </div>
     </>
   );
@@ -43,7 +33,16 @@ const Card = ({
 export default Card;
 
 /*
-  let colors = ["info", "secondary", "success"];
+      </div>
+        <Dropdown
+          color={color}
+          allAnswers={allAnswers}
+          correctAnswer={correctAnswer}
+          interrogative={interrogative}
+        />
+      </div>
+
+      let colors = ["info", "secondary", "success"];
   let ints = ["Who", "What", "When", "Where"];
 
             <p>

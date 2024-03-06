@@ -1,7 +1,11 @@
-import React from "react";
+// import React from "react";
 
-const Score = () => {
-  return <h1 id="score">MyScore: X</h1>;
+interface Props {
+  score: number;
+}
+
+const Score = ({ score }: Props) => {
+  return <h1 id="score">MyScore:&emsp;{score}</h1>;
 };
 
 export default Score;
