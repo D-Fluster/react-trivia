@@ -39,12 +39,17 @@
 }
 
 .btn-group {
-  margin: 5% auto 250px auto;
+  margin: 5% auto 250px auto !important;
+  width: min(50%);
 }
 
 [type="button"] {
-  padding: 15% auto 15% auto;
-  font-size: 1.5em;
+  padding: 5% !important;
+  font-size: 1.33em !important;
+}
+
+.dropdown-menu {
+  width: 100%;
 }
 
 .dropdown-item {
