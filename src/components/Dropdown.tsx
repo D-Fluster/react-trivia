@@ -5,8 +5,14 @@ interface Props {
   allAnswers: string[];
   correctAnswer: number;
   interrogative: string;
-  onClick: () => void;
+  onClick: (userAnswer: number) => void;
 }
+
+// userAnswer: number;
+// onClick: (userAnswer: number) => void;
+
+// {/* setCorrect={handleCorrect} */}
+// setCorrect: boolean;
 
 const Dropdown = ({
   color,
@@ -31,7 +37,7 @@ const Dropdown = ({
               key={answerIndex}
               id={"a" + answerIndex}
               className="dropdown-item"
-              onClick={onClick}
+              onClick={() => onClick(answerIndex)}
             >
               {answerOption}, {answerIndex === correctAnswer ? "Yep!" : "Nope!"}
             </li>

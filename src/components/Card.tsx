@@ -1,19 +1,12 @@
 // import React, { ReactNode } from "react";
 
 import { ReactNode } from "react";
-// import Dropdown from "./Dropdown";
 
 interface Props {
   children: ReactNode;
-  color:
-    | "info" // categories[0] / Pop Culture / blue
-    | "secondary" // categories[1] / Entertainment / gray
-    | "success"; // categories[2] / Technology / green
-  heading: "Pop Culture" | "Entertainment" | "Technology";
+  color: string;
+  heading: string;
   question: string;
-  // allAnswers: string[];
-  // correctAnswer: number;
-  // interrogative: string;
 }
 
 const Card = ({ children, color, heading, question }: Props) => {
@@ -33,6 +26,21 @@ const Card = ({ children, color, heading, question }: Props) => {
 export default Card;
 
 /*
+// import Dropdown from "./Dropdown";
+
+interface Props {
+  children: ReactNode;
+  color:
+    | "info" // categories[0] / Pop Culture / blue
+    | "secondary" // categories[1] / Entertainment / gray
+    | "success"; // categories[2] / Technology / green
+  heading: "Pop Culture" | "Entertainment" | "Technology";
+  question: string;
+  // allAnswers: string[];
+  // correctAnswer: number;
+  // interrogative: string;
+}
+
       </div>
         <Dropdown
           color={color}

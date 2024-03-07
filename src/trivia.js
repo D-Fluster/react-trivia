@@ -14,6 +14,8 @@ let words = ["Who", "What", "When", "Where"];
 //   interrogative: string;
 // }
 
+// move i give up into a new button in the app 
+
 let questions = [
   {
     id: "c-01",
@@ -21,7 +23,8 @@ let questions = [
     heading: headings[0],
     question:
       "Which portable pet, released in the US in 1997, would literally die in the palm of your hands if not fed and cleaned throughout day?",
-    allAnswers: ["Chia Pet", "Furby", "Pikachu", "Tamagotchi", "Yugioh",],
+          // trivia[0].question to access this
+      allAnswers: ["Chia Pet", "Furby", "Pikachu", "Tamagotchi", "Yugioh",],
     correctAnswer: this.allAnswers[3], // Tamagotchi 
       // ***** maybe just store the index here? ******
     interrogative: words[1],

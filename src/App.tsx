@@ -1,15 +1,11 @@
 import { useState } from "react";
 
-// Within function:
-// // const [count, setCount] = useState(0);
-
 import Card from "./components/Card";
 import Dropdown from "./components/Dropdown";
 import Header from "./components/Header";
 import Score from "./components/Score";
 
 function App() {
-  let score = 0;
   let colors = ["info", "secondary", "success"];
   let headings = ["Pop Culture", "Entertainment", "Technology"];
   let interrogativeWords = ["Who", "What", "When", "Where"];
@@ -21,7 +17,6 @@ function App() {
       heading: headings[0],
       question:
         "Which portable pet, released in the US in 1997, would literally die in the palm of your hands if not fed and cleaned throughout day?",
-      // trivia[0].question to access this
       allAnswers: ["Chia Pet", "Furby", "Pikachu", "Tamagotchi", "Yugioh"],
       correctAnswer: 3, // Tamagotchi
       interrogative: interrogativeWords[1],
@@ -54,9 +49,10 @@ function App() {
     },
     {
       id: "end",
-      color: colors[0],
-      heading: "End of game!",
-      question: "You did it!",
+      color: "warning",
+      heading: "End of Game!",
+      question:
+        "You did it! Take a look at your score and celebrate with a trip to Hot Topic!",
       allAnswers: [
         "Play Again",
         "Play Again",
@@ -72,21 +68,17 @@ function App() {
   const [index, setIndex] = useState(0);
   const hasNext = index < trivia.length - 1;
   let triviaQ = trivia[index];
-  let correctAnswerIndex = triviaQ.correctAnswer;
-  let isCorrect = index === correctAnswerIndex;
+  let [score, setScore] = useState(0);
+  let userAnswer;
 
-  // let correctAnswerIndex = triviaQ.correctAnswer;
-  // console.log(correctAnswerIndex); // yes, logs index value
-  // console.log(isCorrect);  // initially false
-
-  function handleNextClick() {
-    if (isCorrect) {
-      score++;
+  function handleNextClick(userAnswer) {
+    if (userAnswer === triviaQ.correctAnswer) {
+      setScore(score + 1);
     }
     if (hasNext) {
       setIndex(index + 1);
     } else {
-      score = 0;
+      setScore(0);
       setIndex(0);
     }
   }
@@ -137,3 +129,15 @@ export default App;
 // <button onClick={handleNextClick}>Next Question</button> {/* WORKS! */}
 
 // else --> setIndex(0); // setIndex(trivia.length - 1); // create last element of "check your score" or something and put it here
+
+// // //
+
+// let [isCorrect, setCorrect] = useState(false);
+// let correctAnswerIndex = triviaQ.correctAnswer;
+//  let isCorrect = index === triviaQ.correctAnswer;
+// // Currently, this is counting if the index of the question *object*
+// // is the same as the index of the correct answer, *NOT* what we want!
+// let correctAnswerIndex = triviaQ.correctAnswer;
+// console.log(correctAnswerIndex); // yes, logs index value
+// console.log(isCorrect);  // initially false
+// function handleNextClick( answerIndex: number) { }
