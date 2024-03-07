@@ -74,6 +74,37 @@ export default App;
 
 // // // // // // // // // // // // // // // // // // //
 
+// // // // // //
+
+// can only call {item.arr[index#] if *all* objects have an array}
+// // or {items[index].arr[index#]} would hard-code th object at "index"
+
+// instead of map can use Object.entries (?)
+// // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
+
+// Can't print just {item}
+// Can print {item.arr} but not {item.arr[0]} or {item.arr[index]}
+
+// import trivia from "./trivia.js";
+// import background from "./assets/brAInbowXL.jpg";
+// <div style={{ backgroundImage: `url(${background})` }}>
+
+// <button onClick={handleNextClick}>Next Question</button> {/* WORKS! */}
+
+// else --> setIndex(0); // setIndex(trivia.length - 1); // create last element of "check your score" or something and put it here
+
+// // //
+
+// let [isCorrect, setCorrect] = useState(false);
+// let correctAnswerIndex = triviaQ.correctAnswer;
+//  let isCorrect = index === triviaQ.correctAnswer;
+// // Currently, this is counting if the index of the question *object*
+// // is the same as the index of the correct answer, *NOT* what we want!
+// let correctAnswerIndex = triviaQ.correctAnswer;
+// console.log(correctAnswerIndex); // yes, logs index value
+// console.log(isCorrect);  // initially false
+// function handleNextClick( answerIndex: number) { }
+
 /*
 // import { useState } from "react";
 

@@ -8,12 +8,6 @@ interface Props {
   onClick: (userAnswer: number) => void;
 }
 
-// userAnswer: number;
-// onClick: (userAnswer: number) => void;
-
-// {/* setCorrect={handleCorrect} */}
-// setCorrect: boolean;
-
 const Dropdown = ({
   color,
   allAnswers,
@@ -23,7 +17,7 @@ const Dropdown = ({
 }: Props) => {
   return (
     <>
-      <div className="btn-group">
+      <div className="btn-group" id="btn-dropdown">
         <button
           type="button"
           className={"btn dropdown-toggle btn-" + color}
@@ -39,17 +33,9 @@ const Dropdown = ({
               className="dropdown-item"
               onClick={() => onClick(answerIndex)}
             >
-              {answerOption}, {answerIndex === correctAnswer ? "Yep!" : "Nope!"}
+              {answerOption}
             </li>
           ))}
-          <li>
-            <hr className="dropdown-divider" />
-          </li>
-          <li>
-            <a className="dropdown-item" id="done" href="#">
-              I give up!
-            </a>
-          </li>
         </ul>
       </div>
     </>
@@ -57,6 +43,14 @@ const Dropdown = ({
 };
 
 export default Dropdown;
+
+//, {answerIndex === correctAnswer ? "Yep!" : "Nope!"}
+
+// userAnswer: number;
+// onClick: (userAnswer: number) => void;
+
+// {/* setCorrect={handleCorrect} */}
+// setCorrect: boolean;
 
 /* 3/26/24 1:30pm - display is working as expected!
 but not DRY nor functional, and I think one can lead to the other here

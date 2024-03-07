@@ -1,16 +1,17 @@
 import { useState } from "react";
 
+import ButtonGroup from "./components/ButtonGroup";
 import Card from "./components/Card";
 import Dropdown from "./components/Dropdown";
 import Header from "./components/Header";
 import Score from "./components/Score";
 
 function App() {
-  let colors = ["info", "secondary", "success"];
-  let headings = ["Pop Culture", "Entertainment", "Technology"];
-  let interrogativeWords = ["Who", "What", "When", "Where"];
+  const colors = ["info", "warning", "success"];
+  const headings = ["Pop Culture", "Entertainment", "Technology"];
+  const interrogativeWords = ["Who", "What", "When", "Where"];
 
-  let trivia = [
+  const trivia = [
     {
       id: "c-01",
       color: colors[0],
@@ -49,7 +50,7 @@ function App() {
     },
     {
       id: "end",
-      color: "warning",
+      color: "secondary",
       heading: "End of Game!",
       question:
         "You did it! Take a look at your score and celebrate with a trip to Hot Topic!",
@@ -67,8 +68,9 @@ function App() {
 
   const [index, setIndex] = useState(0);
   const hasNext = index < trivia.length - 1;
-  let triviaQ = trivia[index];
-  let [score, setScore] = useState(0);
+  const triviaQ = trivia[index];
+  const [count, setCount] = useState(0);
+  const [score, setScore] = useState(0);
   let userAnswer;
 
   function handleNextClick(userAnswer) {
@@ -76,10 +78,12 @@ function App() {
       setScore(score + 1);
     }
     if (hasNext) {
+      setCount(count + 1);
       setIndex(index + 1);
     } else {
-      setScore(0);
+      setCount(0);
       setIndex(0);
+      setScore(0);
     }
   }
 
@@ -101,43 +105,13 @@ function App() {
           interrogative={triviaQ.interrogative}
           onClick={handleNextClick}
         />
+        <ButtonGroup />
       </Card>
       <div>
-        <Score score={score} />
+        <Score count={count} score={score} />
       </div>
     </>
   );
 }
 
 export default App;
-
-// // // // // //
-
-// can only call {item.arr[index#] if *all* objects have an array}
-// // or {items[index].arr[index#]} would hard-code th object at "index"
-
-// instead of map can use Object.entries (?)
-// // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
-
-// Can't print just {item}
-// Can print {item.arr} but not {item.arr[0]} or {item.arr[index]}
-
-// import trivia from "./trivia.js";
-// import background from "./assets/brAInbowXL.jpg";
-// <div style={{ backgroundImage: `url(${background})` }}>
-
-// <button onClick={handleNextClick}>Next Question</button> {/* WORKS! */}
-
-// else --> setIndex(0); // setIndex(trivia.length - 1); // create last element of "check your score" or something and put it here
-
-// // //
-
-// let [isCorrect, setCorrect] = useState(false);
-// let correctAnswerIndex = triviaQ.correctAnswer;
-//  let isCorrect = index === triviaQ.correctAnswer;
-// // Currently, this is counting if the index of the question *object*
-// // is the same as the index of the correct answer, *NOT* what we want!
-// let correctAnswerIndex = triviaQ.correctAnswer;
-// console.log(correctAnswerIndex); // yes, logs index value
-// console.log(isCorrect);  // initially false
-// function handleNextClick( answerIndex: number) { }
