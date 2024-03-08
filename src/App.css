@@ -70,6 +70,7 @@ which displays the trivia category */
 /* Style the text element within the Card component,
 which displays the trivia question */
 .card-text {
+  font-size: 1.1em;
   margin: 5%;
 }
 

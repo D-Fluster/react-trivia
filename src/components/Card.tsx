@@ -1,4 +1,4 @@
-/* Import ReactNode for passing the "children" property as rich text */
+/* Import ReactNode for passing the "children" property as copmonents and rich text */
 import { ReactNode } from "react";
 
 /* Initialize interface properties to be displayed within this component */
