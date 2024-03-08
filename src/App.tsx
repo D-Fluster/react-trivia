@@ -10,9 +10,6 @@ import Score from "./components/Score";
 /* Define the layout of this topmost parent component */
 function App() {
   /* Declare all trivia information */
-  const colors = ["info", "warning", "success"];
-  const headings = ["Pop Culture", "Entertainment", "Technology"];
-  const interrogativeWords = ["Who", "What", "When", "Where"];
   const myTrivia = trivia;
 
   /* Initialize use states */

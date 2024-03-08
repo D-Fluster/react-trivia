@@ -17,7 +17,6 @@
   color: lavender !important;
   padding: 3%;
   width: 40rem;       /* "rem" = relative to "root-em" */
-  margin-top: 1.5%;
 }
 
 /* Style the heading element within the Header component,

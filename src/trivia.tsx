@@ -1,4 +1,4 @@
-const colors = ["info", "secondary", "success"];
+const colors = ["info", "warning", "success"];
 const headings = ["Pop Culture", "Entertainment", "Technology"];
 const interrogativeWords = ["Who", "What", "When", "Where"];
 
@@ -286,7 +286,7 @@ const trivia = [
   {
     // index 20
     id: "end",
-    color: "warning",
+    color: "secondary",
     heading: "THE END",
     question:
       "You did it! Check your score below to see if you're the bomb dot com or if you just got moted. But don't worry 'cuz it's not the End of Ze World!",
