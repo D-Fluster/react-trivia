@@ -3,7 +3,6 @@ and/or pass a function argument back to the parent App for navigation */
 interface Props {
   color: string;
   allAnswers: string[];
-  correctAnswer: number;
   interrogative: string;
   onClick: (userAnswer: number) => void;
 }
@@ -13,13 +12,7 @@ users will not be able to see the answer options without clicking on the button,
 and upon doing so will be presented with all the answer options; choosing any
 answer navigates them to the next question and increments the "count" variable,
 while choosing the correct answer additionally increments the "score" variable */
-const Dropdown = ({
-  color,
-  allAnswers,
-  correctAnswer,
-  interrogative,
-  onClick,
-}: Props) => {
+const Dropdown = ({ color, allAnswers, interrogative, onClick }: Props) => {
   return (
     <>
       <div className="btn-group" id="btn-dropdown">

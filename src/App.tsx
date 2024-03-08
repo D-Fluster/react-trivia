@@ -20,18 +20,11 @@ function App() {
   const [count, setCount] = useState(0);
   const [score, setScore] = useState(0);
 
-  /* Initialize null variables for user actions */
-  let userAnswer;
-  let button;
-  let back;
-  let next;
-  let end;
-
   /* Create functions for handling user input */
 
   /* Update trivia information displayed, count, and score
   based on user interaction with the Dropdown component */
-  function handleNextClick(userAnswer) {
+  function handleNextClick(userAnswer: number) {
     if (userAnswer === triviaQ.correctAnswer) {
       setScore(score + 1);
     }
@@ -47,7 +40,7 @@ function App() {
 
   /* Update only trivia information displayed based on 
   user interaction with the ButtonGroup compnent */
-  function handleButtonClick(button) {
+  function handleButtonClick(button: string) {
     if (button === "back" && index === 0) {
       setIndex(0);
     } else if (button === "back" && index > 0) {
@@ -75,7 +68,6 @@ function App() {
         <Dropdown
           color={triviaQ.color}
           allAnswers={triviaQ.allAnswers}
-          correctAnswer={triviaQ.correctAnswer}
           interrogative={triviaQ.interrogative}
           onClick={handleNextClick}
         />

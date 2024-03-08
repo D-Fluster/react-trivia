@@ -1,3 +1,4 @@
+/*
 import { ReactNode } from "react";
 
 interface Props {
@@ -22,6 +23,10 @@ const Card = ({ children, color, heading, question }: Props) => {
 };
 
 export default Card;
+
+// // // // // // // // // // // // // // // // // // // // // // // //
+
+*/
 
 /*
 // import Dropdown from "./Dropdown";

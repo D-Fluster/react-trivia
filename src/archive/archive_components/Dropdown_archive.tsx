@@ -1,4 +1,8 @@
+/*
 // import React from "react";
+
+// Later removed correctAnswer property on this component, as it
+// wasn't explicitly being called here, and retained functionality!
 
 interface Props {
   color: string;
@@ -43,6 +47,10 @@ const Dropdown = ({
 };
 
 export default Dropdown;
+
+// // // // // // // // // // // // // // // // // // // // // // // //
+
+*/
 
 //, {answerIndex === correctAnswer ? "Yep!" : "Nope!"}
 

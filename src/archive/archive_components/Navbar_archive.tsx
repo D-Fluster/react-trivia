@@ -1,4 +1,4 @@
-import image from "/src/assets/brAInbow.png";
+/* import image from "/src/assets/brAInbow.png";
 
 const Navbar = () => {
   return (
@@ -27,6 +27,10 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// // // // // // // // // // // // // // // // // // // // // // // //
+
+*/
 
 /* BOOTSTRAP HTML (NOT USED in Header.tsx):
 // Navbar:

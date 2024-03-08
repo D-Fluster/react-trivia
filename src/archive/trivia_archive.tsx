@@ -1,3 +1,4 @@
+/*
 // Couldn't get this to import correctly unless it was in TSX format
 
 // ** note correctAnwer on the new ones
@@ -307,6 +308,10 @@ const trivia = [
 ];
 
 export default trivia;
+
+// // // // // // // // // // // // // // // // // // // // // // // //
+
+*/
 
 /*
 

@@ -1,3 +1,4 @@
+/* 
 // Counter tutorial @ https://react.dev/learn
 
 // 3/6/24 12:30pm - Trivia object mapping working, but shows all questions
@@ -73,6 +74,19 @@ function App() {
 }
 
 export default App;
+
+// // // // // // // // // // // // // // // // // // // // // // // //
+
+*/
+
+/* Initialize null variables for user actions -- removed because they apparently 
+weren't necessary and gave TypeScript(?) errors when importing into Vercel
+  let userAnswer;
+  let button;
+  let back;
+  let next;
+  let end;
+   */
 
 /*
 // // // // // // // // // // // // // // // // // // //
