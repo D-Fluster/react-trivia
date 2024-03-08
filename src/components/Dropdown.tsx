@@ -28,7 +28,7 @@ const Dropdown = ({
           className={"btn dropdown-toggle btn-" + color}
           data-bs-toggle="dropdown"
         >
-          {interrogative} Am I?
+          {interrogative} Am I?&ensp;
         </button>
         <ul className="dropdown-menu">
           {allAnswers.map((answerOption, answerIndex) => (
