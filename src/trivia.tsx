@@ -39,17 +39,7 @@ const trivia = [
     correctAnswer: 2, // MySpace
     interrogative: interrogativeWords[1],
   },
-  
-{
-  id: "",
-  color: colors[],
-  heading: headings[],
-  question: "",
-  allAnswers: ["0", "1", "2", "3", "4"],
-  correctAnwer: ,
-  interrogative: interrogativeWords[],
-},
-{
+  {
     id: "end",
     color: "warning",
     heading: "End of Game!",
@@ -67,7 +57,20 @@ const trivia = [
   },
 ];
 
+export default trivia;
+
 /*
+
+{
+  id: "",
+  color: colors[],
+  heading: headings[],
+  question: "",
+  allAnswers: ["0", "1", "2", "3", "4"],
+  correctAnwer: ,
+  interrogative: interrogativeWords[],
+},
+
 
 * Tech 
 * When
@@ -103,6 +106,7 @@ V for Vendetta (also Wachowskis)
 * Culture
 * Int?
 * Q: ?
+Gotta Catch 'Em All!
 * A: Pokemon Trading Card Game (TCG) released US 1999
 * Others:
 Magic: The Gathering, released 1993
@@ -158,7 +162,6 @@ chain mail
 
 */
 
-
 /*
 
 {
@@ -193,6 +196,61 @@ let words = ["Who", "What", "When", "Where"];
 // }
 
 // move i give up into a new button in the app 
+
+  const trivia = [
+    {
+      id: "c-01",
+      color: colors[0],
+      heading: headings[0],
+      question:
+        "Which portable pet, released in the US in 1997, would literally die in the palm of your hands if not fed and cleaned throughout day?",
+      allAnswers: ["Chia Pet", "Furby", "Pikachu", "Tamagotchi", "Yugioh"],
+      correctAnswer: 3, // Tamagotchi
+      interrogative: interrogativeWords[1],
+    },
+    {
+      id: "e-01",
+      color: colors[1],
+      heading: headings[1],
+      question:
+        'Which CrazySexyCool girl-power group warned us not to go chasing "Waterfalls" in 1995?',
+      allAnswers: [
+        "Blaque",
+        "Destiny's Child",
+        "En Vogue",
+        "The Spice Girls",
+        "TLC",
+      ],
+      correctAnswer: 4, // TLC
+      interrogative: interrogativeWords[0],
+    },
+    {
+      id: "t-01",
+      color: colors[2],
+      heading: headings[2],
+      question:
+        "Launched in 2003, which social media platform is considered the first to have attracted a worldwide audience?",
+      allAnswers: ["Facebook", "Friendster", "MySpace", "Twitter", "YouTube"],
+      correctAnswer: 2, // MySpace
+      interrogative: interrogativeWords[1],
+    },
+    {
+      id: "last",
+      color: "secondary",
+      heading: "End of Game!",
+      question:
+        "You did it! Take a look at your score and celebrate with a trip to Hot Topic!",
+      allAnswers: [
+        "Play Again",
+        "Play Again",
+        "Play Again",
+        "Play Again",
+        "Play Again",
+      ],
+      correctAnswer: null,
+      interrogative: "Done!",
+    },
+  ];
 
 let questions = [
   {

@@ -28,7 +28,8 @@ const Navbar = () => {
 
 export default Navbar;
 
-/*
+/* BOOTSTRAP HTML (NOT USED in Header.tsx):
+// Navbar:
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
@@ -37,4 +38,10 @@ export default Navbar;
     </a>
   </div>
 </nav>
+
+// Display headings:
+<h1 class="display-1">Display 1</h1>
+<h1 class="display-2">Display 2</h1>
+<h1 class="display-3">Display 3</h1>
+<h1 class="display-4">Display 4</h1>
 */

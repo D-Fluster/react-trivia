@@ -1,15 +1,27 @@
-#root {
-  text-align: center;
-  background-color: lavender;
+/* Set background color for the entire document */
+#body {
+  background-color: orchid;
 }
 
+/* Center all items and text */
+#root {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+/* Style the entire Header component */
 #header-wrapper {
   background-color: rebeccapurple !important;
-  border: 10px groove orchid;
+  border: 10px groove yellow;
   color: lavender !important;
   padding: 3%;
+  width: 40rem;       /* "rem" = relative to "root-em" */
+  margin-top: 1.5%;
 }
 
+/* Style the heading element within the Header component,
+including adding a text outline using -webkit */
 #header {
   font-family: "Rockwell", "Papyrus", fantasy, sans-serif;
   font-size: max(3em);  
@@ -19,20 +31,35 @@
   -webkit-text-stroke-color: darkslategray;
 }
 
-#score {
-  background-color: orchid;
+/* Style the entire Score component */
+#score-wrapper {
+  background-color: rebeccapurple;
   border: 7px groove yellow;
-  color: aliceblue;
+  color: lavender;
+  padding: 2%;
+  width: 40rem;
+}
+
+/* Style the scoring element within the Score component,
+including adding a text outline using -webkit */
+#score {
   font-size: max(2em);
-  padding: 3%;
-  text-shadow: 7px 7px 7px rebeccapurple;
+  font-weight: bold;
+  padding-bottom: 1%;
+  text-shadow: 5px 5px 5px aliceblue;
+  -webkit-text-stroke-width: 0.77px;
+  -webkit-text-stroke-color: darkslategray;
 }
 
+/* Style the outermost container of the Card component */
 .card {
-  margin: 3% 3% 3% 3%;
-  padding: 1% 3% 1% 3%;
+  margin: 3%;
+  padding: 1% auto 1% auto;
+  max-width: 33rem;
 }
 
+/* Style the title element within the Card component,
+which displays the trivia category */
 .card-title {
   border-radius: 11px;
   font-size: 2em;
@@ -40,135 +67,35 @@
   padding: 3%;
 }
 
+/* Style the text element within the Card component,
+which displays the trivia question */
 .card-text {
   margin: 5%;
 }
 
+/* Style the outermost container of the ButtonGroup & Dropdown components */
 .btn-group {
   margin: 3% auto 3% auto !important;
   width: min(50%);
 }
 
+/* Style the outermost container of the Dropdown component only */
 #btn-dropdown {
   margin-bottom: 200px !important;
 }
 
+/* Style all buttons, used in the ButtonGroup & Dropdown components */
 [type="button"] {
   padding: 5% !important;
 }
 
+/* Style the dropdown menu within the Dropdown component */
 .dropdown-menu {
+  background-color: lavender !important;
   width: 100%;
 }
 
+/* Style the elements of the dropdown menu within the Dropdown component */
 .dropdown-item {
   text-align: center !important;
 }
-
-/* 
-margins & padding -- up, right, down, left
-
-$body-bg {
-  background-color: lavender;
-}
-
-.card-body{
-  border: 1px solid black;
-}
-
-clamp(200px, 33%, 300px) 
-will "clamp" the min & max values (e.g., of margins/padding)
-where the middle value is an ideal
-
-  margin: 5% auto 250px auto;
-  padding: 5% 33% 5% 33%;
-  border: 10px solid black;
-
-  <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <div class="navbar-brand">
-      <img class="d-inline-block align-text-top">
-
-.container-fluid {
-  background-color: rebeccapurple !important;
-  border: 10px groove orchid;
-  color: lavender !important;
-  font-family:"Papyrus", fantasy, sans-serif;
-  padding: 3%;
-}
-
-.d-inline-block {
-  margin-right: 11%;
-}
-
-.navbar-brand {
-  color: lavender !important;
-  font-size: max(3em) !important;
-}
-  */
-
-
-/*
-<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Action
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-*/
-
-/*
-  background-image: url("https://media.geeksforgeeks.org/wp-content/uploads/rk.png");
-  background-size: "cover";
-  height: 100vh;
-  background-repeat: no-repeat;
-*/
-
-
-/*
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-*/

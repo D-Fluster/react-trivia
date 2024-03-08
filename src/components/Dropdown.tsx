@@ -1,5 +1,5 @@
-// import React from "react";
-
+/* Initialize interface properties to be displayed within this component
+and/or pass a function argument back to the parent App for navigation */
 interface Props {
   color: string;
   allAnswers: string[];
@@ -8,6 +8,11 @@ interface Props {
   onClick: (userAnswer: number) => void;
 }
 
+/* Define the layout and functionality of this Dropdown component such that
+users will not be able to see the answer options without clicking on the button,
+and upon doing so will be presented with all the answer options; choosing any
+answer navigates them to the next question and increments the "count" variable,
+while choosing the correct answer additionally increments the "score" variable */
 const Dropdown = ({
   color,
   allAnswers,
@@ -42,104 +47,10 @@ const Dropdown = ({
   );
 };
 
+/* Export this component for use within the program */
 export default Dropdown;
 
-//, {answerIndex === correctAnswer ? "Yep!" : "Nope!"}
-
-// userAnswer: number;
-// onClick: (userAnswer: number) => void;
-
-// {/* setCorrect={handleCorrect} */}
-// setCorrect: boolean;
-
-/* 3/26/24 1:30pm - display is working as expected!
-but not DRY nor functional, and I think one can lead to the other here
-
-interface Props {
-  color: string;
-  allAnswers: string[];
-  correctAnswer: number;
-  interrogative: string;
-}
-
-const Dropdown = ({
-  color,
-  allAnswers,
-  correctAnswer,
-  interrogative,
-}: Props) => {
-  return (
-    <>
-      <div className="btn-group">
-        <button
-          type="button"
-          className={"btn dropdown-toggle btn-" + color}
-          data-bs-toggle="dropdown"
-        >
-          {interrogative} Am I?
-        </button>
-        <ul className="dropdown-menu">
-          <li className="dropdown-item" id="a0">
-            {allAnswers[0]},{" "}
-            {allAnswers[0] === allAnswers[correctAnswer] ? "Yep!" : "Nope!"}
-          </li>
-          <li>
-            <a className="dropdown-item" id="a1" href="#">
-              {allAnswers[1]},{" "}
-              {allAnswers[1] === allAnswers[correctAnswer] ? "Yep!" : "Nope!"}
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" id="a2" href="#">
-              {allAnswers[2]},{" "}
-              {allAnswers[2] === allAnswers[correctAnswer] ? "Yep!" : "Nope!"}
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" id="a3" href="#">
-              {allAnswers[3]},{" "}
-              {allAnswers[3] === allAnswers[correctAnswer] ? "Yep!" : "Nope!"}
-            </a>
-          </li>
-          <li>
-            <a className="dropdown-item" id="a4" href="#">
-              {allAnswers[4]},{" "}
-              {allAnswers[4] === allAnswers[correctAnswer] ? "Yep!" : "Nope!"}
-            </a>
-          </li>
-          <li>
-            <hr className="dropdown-divider" />
-          </li>
-          <li>
-            <a className="dropdown-item" id="done" href="#">
-              I give up!
-            </a>
-          </li>
-        </ul>
-      </div>
-    </>
-  );
-};
-
-export default Dropdown;
-*/
-
-/*
-      <div>
-        <strong>color:</strong> {color} <br />
-        <strong>allAnswers:</strong> {allAnswers} <br />
-        <strong>correctAnswer:</strong> {correctAnswer} <br />
-        <strong>interrogative:</strong> {interrogative}
-      </div>
-
-// interface Props {
-//   color:
-//     | "info" // categories[0] / Pop Culture / blue
-//     | "secondary" // categories[1] / Entertainment / gray
-//     | "success"; // categories[2] / Technology / green
-//   interrogative: "Who" | "What?" | "When?" | "Where";
-// }
-
+/* BOOTSTRAP HTML:
 <div class="btn-group">
   <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Action

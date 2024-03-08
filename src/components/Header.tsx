@@ -1,3 +1,4 @@
+/* Define the layout of this Header component */
 const Header = () => {
   return (
     <>
@@ -17,26 +18,5 @@ const Header = () => {
   );
 };
 
+/* Export this component for use within the program */
 export default Header;
-
-/*
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      Bootstrap
-    </a>
-  </div>
-</nav>
-
-<div className="display-1">
-
-<p>Grab your Xs and get your Ys ready 'cuz it's time for...</p>
-
-
-// // // // //
-FUNCTIONAL BUT BORING:
-// // // // //
-
-
-*/

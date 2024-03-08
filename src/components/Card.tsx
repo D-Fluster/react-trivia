@@ -1,7 +1,7 @@
-// import React, { ReactNode } from "react";
-
+/* Import ReactNode for passing the "children" property as rich text */
 import { ReactNode } from "react";
 
+/* Initialize interface properties to be displayed within this component */
 interface Props {
   children: ReactNode;
   color: string;
@@ -9,6 +9,7 @@ interface Props {
   question: string;
 }
 
+/* Define the layout of this Card component */
 const Card = ({ children, color, heading, question }: Props) => {
   return (
     <>
@@ -23,62 +24,10 @@ const Card = ({ children, color, heading, question }: Props) => {
   );
 };
 
+/* Export this component for use within the program */
 export default Card;
 
-/*
-// import Dropdown from "./Dropdown";
-
-interface Props {
-  children: ReactNode;
-  color:
-    | "info" // categories[0] / Pop Culture / blue
-    | "secondary" // categories[1] / Entertainment / gray
-    | "success"; // categories[2] / Technology / green
-  heading: "Pop Culture" | "Entertainment" | "Technology";
-  question: string;
-  // allAnswers: string[];
-  // correctAnswer: number;
-  // interrogative: string;
-}
-
-      </div>
-        <Dropdown
-          color={color}
-          allAnswers={allAnswers}
-          correctAnswer={correctAnswer}
-          interrogative={interrogative}
-        />
-      </div>
-
-      let colors = ["info", "secondary", "success"];
-  let ints = ["Who", "What", "When", "Where"];
-
-            <p>
-            <strong>color:</strong> {color} <br />
-            <strong>heading:</strong> {heading} <br />
-            <strong>question:</strong> {question} <br />
-            <strong>allAnswers:</strong> {allAnswers} <br />
-            <strong>correctAnswer:</strong> {correctAnswer} <br />
-            <strong>interrogative:</strong> {interrogative}
-          </p>
-
-// children: ReactNode;
-
-// interface Props {
-//   color:
-//     | "info" // categories[0] / Pop Culture / blue
-//     | "secondary" // categories[1] / Entertainment / gray
-//     | "success"; // categories[2] / Technology / green
-// }
-
-// { color }: Props
-
-// {"card-title text-bg-" + color}
-
-
-// children: string;
-  // onClick: () => void;
-
+/* BOOTSTRAP HTML:
 <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
@@ -95,5 +44,4 @@ interface Props {
     <a href="#" class="card-link">Another link</a>
   </div>
 </div>
-
 */

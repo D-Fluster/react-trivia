@@ -1,3 +1,5 @@
+// Counter tutorial @ https://react.dev/learn
+
 // 3/6/24 12:30pm - Trivia object mapping working, but shows all questions
 
 function App() {
@@ -72,9 +74,14 @@ function App() {
 
 export default App;
 
+/*
 // // // // // // // // // // // // // // // // // // //
 
+HANDLE CLICK (PARAMETER)
+PARAMETER could be index -1, index +1, or index = len-1
+
 // // // // // //
+*/
 
 // can only call {item.arr[index#] if *all* objects have an array}
 // // or {items[index].arr[index#]} would hard-code th object at "index"

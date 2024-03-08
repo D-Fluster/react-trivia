@@ -1,78 +1,39 @@
+/* Import all components and necessary React functionality */
 import { useState } from "react";
-
+import trivia from "./trivia.js";
 import ButtonGroup from "./components/ButtonGroup";
 import Card from "./components/Card";
 import Dropdown from "./components/Dropdown";
 import Header from "./components/Header";
 import Score from "./components/Score";
 
+/* Define the layout of this topmost parent component */
 function App() {
+  /* Declare all trivia information */
   const colors = ["info", "warning", "success"];
   const headings = ["Pop Culture", "Entertainment", "Technology"];
   const interrogativeWords = ["Who", "What", "When", "Where"];
+  const myTrivia = trivia;
 
-  const trivia = [
-    {
-      id: "c-01",
-      color: colors[0],
-      heading: headings[0],
-      question:
-        "Which portable pet, released in the US in 1997, would literally die in the palm of your hands if not fed and cleaned throughout day?",
-      allAnswers: ["Chia Pet", "Furby", "Pikachu", "Tamagotchi", "Yugioh"],
-      correctAnswer: 3, // Tamagotchi
-      interrogative: interrogativeWords[1],
-    },
-    {
-      id: "e-01",
-      color: colors[1],
-      heading: headings[1],
-      question:
-        'Which CrazySexyCool girl-power group warned us not to go chasing "Waterfalls" in 1995?',
-      allAnswers: [
-        "Blaque",
-        "Destiny's Child",
-        "En Vogue",
-        "The Spice Girls",
-        "TLC",
-      ],
-      correctAnswer: 4, // TLC
-      interrogative: interrogativeWords[0],
-    },
-    {
-      id: "t-01",
-      color: colors[2],
-      heading: headings[2],
-      question:
-        "Launched in 2003, which social media platform is considered the first to have attracted a worldwide audience?",
-      allAnswers: ["Facebook", "Friendster", "MySpace", "Twitter", "YouTube"],
-      correctAnswer: 2, // MySpace
-      interrogative: interrogativeWords[1],
-    },
-    {
-      id: "end",
-      color: "secondary",
-      heading: "End of Game!",
-      question:
-        "You did it! Take a look at your score and celebrate with a trip to Hot Topic!",
-      allAnswers: [
-        "Play Again",
-        "Play Again",
-        "Play Again",
-        "Play Again",
-        "Play Again",
-      ],
-      correctAnswer: null,
-      interrogative: "Done!",
-    },
-  ];
-
+  /* Initialize use states */
   const [index, setIndex] = useState(0);
-  const hasNext = index < trivia.length - 1;
-  const triviaQ = trivia[index];
+  const lastIndex = myTrivia.length - 1;
+  const hasNext = index < lastIndex;
+  const triviaQ = myTrivia[index];
   const [count, setCount] = useState(0);
   const [score, setScore] = useState(0);
-  let userAnswer;
 
+  /* Initialize null variables for user actions */
+  let userAnswer;
+  let button;
+  let back;
+  let next;
+  let end;
+
+  /* Create functions for handling user input */
+
+  /* Update trivia information displayed, count, and score
+  based on user interaction with the Dropdown component */
   function handleNextClick(userAnswer) {
     if (userAnswer === triviaQ.correctAnswer) {
       setScore(score + 1);
@@ -87,6 +48,22 @@ function App() {
     }
   }
 
+  /* Update only trivia information displayed based on 
+  user interaction with the ButtonGroup compnent */
+  function handleButtonClick(button) {
+    if (button === "back" && index === 0) {
+      setIndex(0);
+    } else if (button === "back" && index > 0) {
+      setIndex(index - 1);
+    } else if (button === "next" && index < lastIndex) {
+      setIndex(index + 1);
+    } else {
+      setIndex(lastIndex);
+    }
+  }
+
+  /* As this is the topmost parent component, it returns
+  the entire display with each component laid out as desired */
   return (
     <>
       <div>
@@ -105,7 +82,7 @@ function App() {
           interrogative={triviaQ.interrogative}
           onClick={handleNextClick}
         />
-        <ButtonGroup />
+        <ButtonGroup onClick={handleButtonClick} />
       </Card>
       <div>
         <Score count={count} score={score} />
@@ -114,4 +91,5 @@ function App() {
   );
 }
 
+/* Export this component for use within the program */
 export default App;
