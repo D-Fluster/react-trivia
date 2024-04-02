@@ -12,6 +12,8 @@ DKF Completed @ 2024-03-07
 
 ---
 
+# App Map
+
 * **[/src/App.css](https://github.com/LAdanimo/react-trivia/blob/main/src/App.css)**
   * Custom CSS built on top of the Bootstrap framework
 * **[/src/App.tsx](https://github.com/LAdanimo/react-trivia/blob/main/src/App.tsx)**
